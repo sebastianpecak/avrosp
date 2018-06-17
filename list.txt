@@ -1,0 +1,13 @@
+CppFiles = 				\
+	SourceCode/AVRBootloader.cpp	\
+	SourceCode/AVRDevice.cpp	\
+	SourceCode/AVRInSystemProg.cpp	\
+	SourceCode/AVRProgrammer.cpp	\
+	SourceCode/CommChannel.cpp	\
+	SourceCode/ErrorMsg.cpp		\
+	SourceCode/HEXParser.cpp	\
+	SourceCode/JobInfo.cpp		\
+	SourceCode/main.cpp		\
+	SourceCode/SerialPort.cpp	\
+	SourceCode/Utility.cpp		\
+	SourceCode/XMLParser.cpp
