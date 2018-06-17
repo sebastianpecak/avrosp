@@ -31,7 +31,8 @@
 #include "AVRBootloader.hpp"
 #include "AVRInSystemProg.hpp"
 #include "AVRDevice.hpp"
-#include "SerialPort.hpp"
+//#include "SerialPort.hpp"
+#include "SerialPortLinux.hpp"
 #include "Utility.hpp"
 
 using namespace std;

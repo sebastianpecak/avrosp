@@ -22,7 +22,8 @@
 
 #include <iostream>
 #include <fstream>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
 
 /* Global object */
 Utility Util;
@@ -97,7 +98,23 @@ string Utility::convertLong( long num, long radix )
 	char buf[18];
 	string res;
 
-	itoa( num, buf, radix );
+	//itoa( num, buf, radix );
+	switch (radix)
+	{
+	case 8:
+		sprintf(buf, "%o", num);
+		break;
+	case 10:
+		sprintf(buf, "%d", num);
+		break;
+	case 16:
+		sprintf(buf, "%x", num);
+		break;
+	default:
+		buf[0] = 0;
+		break;
+	}
+	
 	res = buf;
 	return res;
 }

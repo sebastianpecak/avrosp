@@ -8,6 +8,6 @@ CppFiles = 				\
 	SourceCode/HEXParser.cpp	\
 	SourceCode/JobInfo.cpp		\
 	SourceCode/main.cpp		\
-	SourceCode/SerialPort.cpp	\
+	SourceCode/SerialPortLinux.cpp	\
 	SourceCode/Utility.cpp		\
 	SourceCode/XMLParser.cpp

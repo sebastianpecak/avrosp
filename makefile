@@ -8,12 +8,13 @@ Objs := $(subst SourceCode, _build, $(Objs))
 
 OutName = program
 
-program: $(Objs)
-	echo star star: $**
+program: $(CppFiles)
+	g++ $(CppFiles) -o test -D NOREGISTRY -fpermissive -g
+#	echo star star: $**
 #	echo.
 
 _build/%.o: SourceCode/%.cpp
-	echo malpa: $@
-	echo strzalka: $<
+#	echo malpa: $@
+#	echo strzalka: $<
 	$(CC) -c  $< -o $@ -D NOREGISTRY -fpermissive
 #	echo.
