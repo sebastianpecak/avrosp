@@ -1,0 +1,3 @@
+﻿  SerialPort.cpp
+c:\users\specak\documents\github\avrosp\sourcecode\serialport.cpp(59): warning C4244: '=': conversion from 'long' to 'char', possible loss of data
+  AvrOSP.vcxproj -> C:\Users\specak\Documents\github\avrosp\Debug\AvrOSP.exe

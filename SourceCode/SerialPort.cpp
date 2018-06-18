@@ -81,6 +81,19 @@ void SerialPort::openChannel()
 	/* Apply new settings */
 	if( !SetCommTimeouts( serialHandle, &comTimeouts ) )
 		throw new ErrorMsg( "Error changing COM port settings!" );
+
+    // Do some basic settings
+    DCB serialParams = { 0 };
+    serialParams.DCBlength = sizeof(serialParams);
+
+    GetCommState(serialHandle, &serialParams);
+
+    return;
+    /*serialParams.BaudRate = baudrate;
+    serialParams.ByteSize = byteSize;
+    serialParams.StopBits = stopBits;
+    serialParams.Parity = parity;
+    SetCommState(serialHandle, &serialParams);*/
 }
 
 
