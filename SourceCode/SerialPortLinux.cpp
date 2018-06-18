@@ -40,6 +40,35 @@ void SerialPortLinux::openChannel()
     if (_portHandle < 0)
 		throw new ErrorMsg("Error opening serial port!");
 
+	struct termios oldtio = {0}, newtio  ={0};
+
+	tcgetattr(_portHandle, &oldtio); /* save current serial port settings */
+
+	cfsetospeed (&oldtio, B115200);
+    cfsetispeed (&oldtio, B115200);
+
+	oldtio.c_cflag = (oldtio.c_cflag & ~CSIZE) | CS8;     // 8-bit chars
+        // disable IGNBRK for mismatched speed tests; otherwise receive break
+        // as \000 chars
+        oldtio.c_iflag &= ~IGNBRK;         // disable break processing
+        oldtio.c_lflag = 0;                // no signaling chars, no echo,
+                                        // no canonical processing
+        oldtio.c_oflag = 0;                // no remapping, no delays
+        oldtio.c_cc[VMIN]  = 0;            // read doesn't block
+        oldtio.c_cc[VTIME] = 5;            // 0.5 seconds read timeout
+
+        oldtio.c_iflag &= ~(IXON | IXOFF | IXANY); // shut off xon/xoff ctrl
+
+        oldtio.c_cflag |= (CLOCAL | CREAD);// ignore modem controls,
+                                        // enable reading
+        oldtio.c_cflag &= ~(PARENB | PARODD);      // shut off parity
+        //oldtio.c_cflag |= parity;
+        oldtio.c_cflag &= ~CSTOPB;
+        oldtio.c_cflag &= ~CRTSCTS;
+
+	tcsetattr(_portHandle, TCSANOW, &oldtio);
+
+
 	//channelOpen = true;
     _portOpened = true;
 
@@ -114,8 +143,8 @@ void SerialPortLinux::flushTX()
     sleep(2); //required to make flush work, for some reason
     
     /* Purge data from write buffer */
-	if( tcflush(_portHandle,TCOFLUSH) < 0)
-		throw new ErrorMsg( "Error flushing COM port TX buffer!" );
+	//if( tcflush(_portHandle,TCOFLUSH) < 0)
+	//	throw new ErrorMsg( "Error flushing COM port TX buffer!" );
 
 }
 
@@ -129,8 +158,8 @@ void SerialPortLinux::flushRX()
     sleep(2); //required to make flush work, for some reason
     
     /* Purge data from write buffer */
-	if( !tcflush(_portHandle,TCIFLUSH) < 0 )
-		throw new ErrorMsg( "Error flushing COM port TX buffer!" );
+	//if( !tcflush(_portHandle,TCIFLUSH) < 0 )
+//		throw new ErrorMsg( "Error flushing COM port TX buffer!" );
 }
 
 //////////////////////////////////////////////////////////////
