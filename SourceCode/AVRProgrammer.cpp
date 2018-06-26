@@ -55,7 +55,7 @@ string AVRProgrammer::readProgrammerID( CommChannel * _comm )
 
 	/* Send 'S' command to programmer */
 	_comm->sendByte( 'S' );
-	_comm->flushTX();
+	//_comm->flushTX();
 
 	/* Read 7 characters */
 	for( long i = 0; i < id.size(); i++ )

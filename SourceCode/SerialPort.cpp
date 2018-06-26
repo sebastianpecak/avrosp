@@ -1,4 +1,4 @@
-#include "SerialPortLinux.hpp"
+#include "SerialPort.hpp"
 #include <cstdio>
 #include <cstdlib>
 #include <fcntl.h>
@@ -55,15 +55,15 @@ void SerialPortLinux::openChannel()
                                         // no canonical processing
         oldtio.c_oflag = 0;                // no remapping, no delays
         oldtio.c_cc[VMIN]  = 0;            // read doesn't block
-        oldtio.c_cc[VTIME] = 5;            // 0.5 seconds read timeout
+        //oldtio.c_cc[VTIME] = 5;            // 0.5 seconds read timeout
 
-        oldtio.c_iflag &= ~(IXON | IXOFF | IXANY); // shut off xon/xoff ctrl
+        //oldtio.c_iflag &= ~(IXON | IXOFF | IXANY); // shut off xon/xoff ctrl
 
         oldtio.c_cflag |= (CLOCAL | CREAD);// ignore modem controls,
                                         // enable reading
         oldtio.c_cflag &= ~(PARENB | PARODD);      // shut off parity
         //oldtio.c_cflag |= parity;
-        oldtio.c_cflag &= ~CSTOPB;
+        oldtio.c_cflag |= CSTOPB;
         oldtio.c_cflag &= ~CRTSCTS;
 
 	tcsetattr(_portHandle, TCSANOW, &oldtio);
@@ -137,14 +137,14 @@ long SerialPortLinux::getByte()
 void SerialPortLinux::flushTX()
 {
     /* Check if channel is open */
-	if( !_portOpened )
-		throw new ErrorMsg( "Channel not open! Cannot flush an unopened channel." );
+	// if( !_portOpened )
+	// 	throw new ErrorMsg( "Channel not open! Cannot flush an unopened channel." );
 
-    sleep(2); //required to make flush work, for some reason
+    // sleep(2); //required to make flush work, for some reason
     
-    /* Purge data from write buffer */
-	//if( tcflush(_portHandle,TCOFLUSH) < 0)
-	//	throw new ErrorMsg( "Error flushing COM port TX buffer!" );
+    // /* Purge data from write buffer */
+	// if( tcflush(_portHandle,TCOFLUSH) < 0)
+	// 	throw new ErrorMsg( "Error flushing COM port TX buffer!" );
 
 }
 
@@ -152,10 +152,10 @@ void SerialPortLinux::flushTX()
 void SerialPortLinux::flushRX()
 {
     /* Check if channel is open */
-	if( !_portOpened )
-		throw new ErrorMsg( "Channel not open! Cannot flush an unopened channel." );
+	// if( !_portOpened )
+	// 	throw new ErrorMsg( "Channel not open! Cannot flush an unopened channel." );
 
-    sleep(2); //required to make flush work, for some reason
+    // sleep(2); //required to make flush work, for some reason
     
     /* Purge data from write buffer */
 	//if( !tcflush(_portHandle,TCIFLUSH) < 0 )

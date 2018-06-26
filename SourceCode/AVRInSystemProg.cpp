@@ -48,10 +48,11 @@ bool AVRInSystemProg::enterProgrammingMode()
 {
 	/* Must select a device from the AVRISP device code table first */
 	comm->sendByte( 'T' );
-	comm->sendByte( 0x64 ); // Select ATmega163, any device in the table will do.
+	comm->sendByte( 'd' ); // Select ATmega163, any device in the table will do.
 	comm->flushTX();
 
 	/* Should return CR */
+	//unsigned char x = comm->getByte();
 	if( comm->getByte() != '\r' )
 		throw new ErrorMsg( "Entering programming mode failed! "
 				"Programmer did not return CR after 'T'-command." );
@@ -61,6 +62,7 @@ bool AVRInSystemProg::enterProgrammingMode()
 	comm->flushTX();
 
 	/* Should return CR */
+	//unsigned char y = comm->getByte();
 	if( comm->getByte() != '\r' )
 		throw new ErrorMsg( "Entering programming mode failed! "
 				"Programmer did not return CR after 'P'-command." );
