@@ -78,7 +78,11 @@ JobInfo::JobInfo()
 	eepromStartAddress = -1;
 	eepromEndAddress = -1;
 
+#ifdef LINUX
+	comPort = "";
+#else
 	comPort = -1;
+#endif
 
 #ifdef ADD_TESTMODE
 	testMode = false;
@@ -230,6 +234,10 @@ void JobInfo::parseCommandline( int argc, char *argv[] )
 
 
 			case 'c' : // Specify COM port.
+#ifdef LINUX
+				// We just copy name of the serial device.
+				comPort = (param + 2);
+#else
 				if( strlen( param ) != 6 )
 					throw new ErrorMsg( "COM port parameter syntax is -cCOMx!" );
 
@@ -240,6 +248,8 @@ void JobInfo::parseCommandline( int argc, char *argv[] )
 					throw new ErrorMsg( "Use COM1 to COM8!" );
 
 				comPort = param[5] - '0'; // Convert COM port digit to number.
+#endif
+
 				break;
 
 
@@ -741,10 +751,12 @@ long JobInfo::convertHex( char * txt )
 
 void JobInfo::doJob()
 {
-	long scanCOM;
-	SerialPortLinux * com;
-	AVRProgrammer * prog;
-	AVRDevice * avr;
+#ifndef LINUX
+	long scanCOM = -1;
+#endif
+	SerialPort * com = nullptr;
+	AVRProgrammer * prog = nullptr;
+	AVRDevice * avr = nullptr;
 	string programmerID;
 	long sig0, sig1, sig2; // Signature bytes.
 
@@ -778,13 +790,21 @@ void JobInfo::doJob()
 
 	Util.log( "Serial port timeout set to " TIMEOUTSTRING " sec.\r\n" );
 
+#ifdef LINUX
+	// If user did not specify serial device return error.
+	if (comPort.length() == 0)
+	{
+		Util.log("Use -c option to specify serial device.");
+		return;
+	}
+#else
 	/* Need to scan for COM port? */
 	if( comPort == -1 )
 	{
 		Util.log( "Scanning COM ports for supported programmer...\n\r" );
 
-		//for( scanCOM = 1; scanCOM <= 8; scanCOM++ )
-		//{
+		for( scanCOM = 1; scanCOM <= 8; scanCOM++ )
+		{
 			Util.progress( "COM" + Util.convertLong( scanCOM ) + "...\r\n" );
 
 			try
@@ -798,8 +818,7 @@ void JobInfo::doJob()
 				/* Contact! Check ID... Add custom handler signatures here */
 				if( programmerID == "AVRBOOT" || programmerID == "AVR ISP" )
 				{
-					//break;
-					goto outLoop;
+					break;
 				}
 
 				delete com;
@@ -811,22 +830,25 @@ void JobInfo::doJob()
 				if( com != NULL ) delete com;
 				delete e;
 			}
-		//}
+		}
 		
 
 		/* Exit if no supported programmers found */
-		// if( scanCOM > 8 )
-		// {
-		// 	Util.log( "No supported programmers found!\r\n" );
-		// 	return;
-		// }
+		if( scanCOM > 8 )
+		{
+			Util.log( "No supported programmers found!\r\n" );
+			return;
+		}
 
-		//comPort = scanCOM;
+		comPort = scanCOM;
 
-	} else // ... COM port is specified
+	}
+#endif
+	// Serial port is specified.
+	else
 	{
 		/* Try to communicate, errors will propagate to caller */
-		com = new SerialPortLinux("/dev/ttyUSB0" );
+		com = new SerialPort(comPort);
 		com->openChannel();
 		programmerID = AVRProgrammer::readProgrammerID( com );
 
@@ -835,17 +857,18 @@ void JobInfo::doJob()
 			throw new ErrorMsg( "Programmer not supported!" );
 	}
 
-	outLoop:
-
+#ifdef LINUX
+	Util.log( "Found " + programmerID + " on " + comPort + "!\r\n" );
+#else
 	Util.log( "Found " + programmerID + " on COM" + Util.convertLong( comPort ) + "!\r\n" );
+#endif
 
 	/* Create programmer interface object, add custom handlers here */
 	if( programmerID == "AVRBOOT" )
 	{
 		prog = new AVRBootloader( com );
 	}
-
-	if( programmerID == "AVR ISP" )
+	else if( programmerID == "AVR ISP" )
 	{
 		prog = new AVRInSystemProg( com );
 	}
@@ -1329,10 +1352,12 @@ void JobInfo::doDeviceDependent( AVRProgrammer * prog, AVRDevice * avr )
 #ifdef ADD_TESTMODE
 void JobInfo::enterTestMode()
 {
+#ifndef LINUX
 	long scanCOM;
-	SerialPortLinux * com;
-	AVRProgrammer * prog;
-	AVRDevice * avr;
+#endif
+	SerialPort * com = nullptr;
+	AVRProgrammer * prog = nullptr;
+	AVRDevice * avr = nullptr;
 	string programmerID;
 	long sig0, sig1, sig2; // Signature bytes.
 
@@ -1340,13 +1365,21 @@ void JobInfo::enterTestMode()
 
 	Util.log( "Entering test mode...\r\n" );
 
+#ifdef LINUX
+	// If user did not specify serial device return error.
+	if (comPort.length() == 0)
+	{
+		Util.log("Use -c option to specify serial device.");
+		return;
+	}
+#else
 	/* Need to scan for COM port? */
 	if( comPort == -1 )
 	{
 		Util.log( "Scanning COM ports for supported programmer...\n\r" );
 
-		//for( scanCOM = 1; scanCOM <= 8; scanCOM++ )
-		//{
+		for( scanCOM = 1; scanCOM <= 8; scanCOM++ )
+		{
 			Util.progress( "COM" + Util.convertLong( scanCOM ) + "...\r\n" );
 
 			try
@@ -1360,8 +1393,7 @@ void JobInfo::enterTestMode()
 				/* Contact! Check ID... Add custom handler signatures here */
 				if( programmerID == "AVRBOOT" || programmerID == "AVR ISP" )
 				{
-					//break;
-					goto outLoop;
+					break;
 				}
 
 				delete com;
@@ -1373,7 +1405,7 @@ void JobInfo::enterTestMode()
 				if( com != NULL ) delete com;
 				delete e;
 			}
-		//}
+		}
 
 		/* Exit if no supported programmers found */
 		if( scanCOM > 8 )
@@ -1384,13 +1416,14 @@ void JobInfo::enterTestMode()
 
 		comPort = scanCOM;
 
-	} else // ... COM port is specified
+	}
+#endif
+	else // ... COM port is specified
 	{
 		/* Try to communicate, errors will propagate to caller */
-		com = new SerialPortLinux( "/dev/ttyUSB0" );
+		com = new SerialPort( comPort );
 		com->openChannel();
 	}
-	outLoop:
 
 	/* Create programmer interface object, add custom handlers here */
 	if( programmerID == "AVRBOOT" )

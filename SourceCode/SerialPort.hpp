@@ -4,15 +4,15 @@
 #include "CommChannel.hpp"
 #include <string>
 
-class SerialPortLinux : public CommChannel
+class SerialPort : public CommChannel
 {
     int _portHandle;
     std::string _portName;
     bool _portOpened;
 
 public:
-    explicit SerialPortLinux(const char* portName);
-    virtual ~SerialPortLinux();
+    explicit SerialPort(const std::string& portName);
+    virtual ~SerialPort();
 
     // Open the communication channel.
 	virtual void openChannel();

@@ -17,8 +17,8 @@ Sources = 				\
 
 Objects = $(Sources:.cpp=.o)
 OutName = avrosp-linux
-Defines = -D NOREGISTRY
-COptions = -c -fpermissive
+Defines = -DNOREGISTRY -DLINUX
+COptions = -c -fpermissive --std=c++0x
 
 # -------------------------------------------
 # Link.
@@ -36,4 +36,5 @@ build: $(Objects)
 # Clean.
 # -------------------------------------------
 clean:
-	rm *.o
+	rm *.o -f
+	rm $(OutName) -f

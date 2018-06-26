@@ -100,7 +100,11 @@ class JobInfo
 		long eepromStartAddress; // Same as above for E2.
 		long eepromEndAddress; // ...
 
+#ifdef LINUX
+		string comPort;
+#else
 		long comPort; // Desired COM port to use, -1 if unspecified.
+#endif
 
 		vector<string> searchpath; // Search path for XML-files.
 

@@ -7,7 +7,7 @@
 #include <unistd.h>
 
 //////////////////////////////////////////////////////////////
-SerialPortLinux::SerialPortLinux(const char* portName) :
+SerialPort::SerialPort(const std::string& portName) :
     _portHandle(-1),
     _portName(portName),
     _portOpened(false)
@@ -15,13 +15,13 @@ SerialPortLinux::SerialPortLinux(const char* portName) :
 }
 
 //////////////////////////////////////////////////////////////
-SerialPortLinux::~SerialPortLinux()
+SerialPort::~SerialPort()
 {
     closeChannel();
 }
 
 //////////////////////////////////////////////////////////////
-void SerialPortLinux::openChannel()
+void SerialPort::openChannel()
 {
     /* Check if channel already open */
 	if(_portOpened)
@@ -90,7 +90,7 @@ void SerialPortLinux::openChannel()
 }
 
 //////////////////////////////////////////////////////////////
-void SerialPortLinux::closeChannel()
+void SerialPort::closeChannel()
 {
     if (_portOpened)
     {
@@ -106,7 +106,7 @@ void SerialPortLinux::closeChannel()
 }
 
 //////////////////////////////////////////////////////////////
-void SerialPortLinux::sendByte(long data)
+void SerialPort::sendByte(long data)
 {
     /* Check if channel is open */
 	if(!_portOpened)
@@ -120,7 +120,7 @@ void SerialPortLinux::sendByte(long data)
 }
 
 //////////////////////////////////////////////////////////////
-long SerialPortLinux::getByte()
+long SerialPort::getByte()
 {
     /* Check if channel is open */
 	if( !_portOpened )
@@ -134,7 +134,7 @@ long SerialPortLinux::getByte()
 }
 
 //////////////////////////////////////////////////////////////
-void SerialPortLinux::flushTX()
+void SerialPort::flushTX()
 {
     /* Check if channel is open */
 	// if( !_portOpened )
@@ -149,7 +149,7 @@ void SerialPortLinux::flushTX()
 }
 
 //////////////////////////////////////////////////////////////
-void SerialPortLinux::flushRX()
+void SerialPort::flushRX()
 {
     /* Check if channel is open */
 	// if( !_portOpened )
@@ -163,7 +163,7 @@ void SerialPortLinux::flushRX()
 }
 
 //////////////////////////////////////////////////////////////
-void SerialPortLinux::sendMultiple( unsigned char * data, long bufsize )
+void SerialPort::sendMultiple( unsigned char * data, long bufsize )
 {
     /* Check if channel is open */
 	if( !_portOpened )

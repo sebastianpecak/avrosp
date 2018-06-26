@@ -49,7 +49,7 @@ Utility::~Utility()
 void Utility::log( const string & txt )
 {
 	if( !noLog )
-		cout << txt;
+		cout << txt << endl;
 }
 
 
