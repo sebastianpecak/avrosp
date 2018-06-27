@@ -110,6 +110,7 @@ void JobInfo::parseCommandline( int argc, char *argv[] )
 
 	searchpath.push_back( "." ); // Add current directory also.
 	searchpath.push_back( ownpath ); // Save for later.
+	searchpath.push_back("../MCUs");
 
 	if( argc <= 1 )
 	{

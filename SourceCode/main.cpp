@@ -29,6 +29,11 @@ int main(int argc, char *argv[])
 {
 	JobInfo j;
 
+	//argc = 3;
+	//const char* aa[] = {"/home/sebastian/github/avrosp/SourceCode/avrosp-linux",
+	//	"-c/dev/ttyUSB0", "-dATmega8"};
+	//argv=(char**)aa;
+
 	try
 	{
 		j.parseCommandline( argc, argv );

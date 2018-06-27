@@ -69,7 +69,11 @@ void AVRDevice::readParametersFromAVRStudio( vector<string> & searchpath )
 	int i;
 	for( i = 0; i < searchpath.size(); i++ )
 	{
+#ifdef LINUX
+		path = searchpath[i] + "/" + deviceName + ".xml";
+#else
 		path = searchpath[i] + "\\" + deviceName + ".xml";
+#endif
 		if( Util.fileExists( path ) )
 			break;
 	}

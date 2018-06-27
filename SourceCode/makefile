@@ -18,7 +18,7 @@ Sources = 				\
 Objects = $(Sources:.cpp=.o)
 OutName = avrosp-linux
 Defines = -DNOREGISTRY -DLINUX
-COptions = -c -fpermissive --std=c++0x
+COptions = -c -fpermissive --std=c++0x -g
 
 # -------------------------------------------
 # Link.

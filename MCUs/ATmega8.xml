@@ -1,0 +1,19 @@
+<AVRPART>
+    <MEMORY>
+        <PROG_FLASH>8192</PROG_FLASH>
+        <EEPROM>512</EEPROM>
+        <BOOT_CONFIG>
+            <PAGESIZE>64</PAGESIZE>
+        </BOOT_CONFIG>
+    </MEMORY>
+    <FUSE>
+        <!-- Here we can put info about extended fuses. -->
+    </FUSE>
+    <ADMIN>
+        <SIGNATURE>
+            <ADDR000>$1E</ADDR000>
+            <ADDR001>$93</ADDR001>
+            <ADDR002>$07</ADDR002>
+        </SIGNATURE>
+    </ADMIN>
+</AVRPART>

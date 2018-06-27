@@ -1,0 +1,1056 @@
+Device Name [AT86RF401]
+flashSize   =  2048
+eepromSize  =  128
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  145
+signature2 =  129
+pagesize   =  0
+------------------------------
+
+Device Name [AT89S51]
+flashSize   =  4096
+eepromSize  =  0
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  81
+signature2 =  6
+pagesize   =  1
+------------------------------
+
+Device Name [AT89S52]
+flashSize   =  8192
+eepromSize  =  0
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  82
+signature2 =  6
+pagesize   =  1
+------------------------------
+
+Device Name [AT90CAN128]
+flashSize   =  131072
+eepromSize  =  4096
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  151
+signature2 =  129
+pagesize   =  256
+------------------------------
+
+Device Name [AT90CAN32]
+flashSize   =  32768
+eepromSize  =  1024
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  149
+signature2 =  129
+pagesize   =  256
+------------------------------
+
+Device Name [AT90CAN64]
+flashSize   =  65536
+eepromSize  =  2048
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  150
+signature2 =  129
+pagesize   =  256
+------------------------------
+
+Device Name [AT90PWM2]
+flashSize   =  8192
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  147
+signature2 =  129
+pagesize   =  64
+------------------------------
+
+Device Name [AT90PWM216]
+flashSize   =  16384
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  148
+signature2 =  131
+pagesize   =  128
+------------------------------
+
+Device Name [AT90PWM2B]
+flashSize   =  8192
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  147
+signature2 =  131
+pagesize   =  64
+------------------------------
+
+Device Name [AT90PWM3]
+flashSize   =  8192
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  147
+signature2 =  129
+pagesize   =  64
+------------------------------
+
+Device Name [AT90PWM316]
+flashSize   =  16384
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  148
+signature2 =  131
+pagesize   =  128
+------------------------------
+
+Device Name [AT90PWM3B]
+flashSize   =  8192
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  147
+signature2 =  131
+pagesize   =  64
+------------------------------
+
+Device Name [AT90S1200]
+flashSize   =  1024
+eepromSize  =  64
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  144
+signature2 =  1
+pagesize   =  0
+------------------------------
+
+Device Name [AT90S2313]
+flashSize   =  2048
+eepromSize  =  128
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  145
+signature2 =  1
+pagesize   =  0
+------------------------------
+
+Device Name [AT90S2323]
+flashSize   =  2048
+eepromSize  =  128
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  145
+signature2 =  2
+pagesize   =  0
+------------------------------
+
+Device Name [AT90S2343]
+flashSize   =  2048
+eepromSize  =  128
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  145
+signature2 =  3
+pagesize   =  0
+------------------------------
+
+Device Name [AT90S4414]
+flashSize   =  4096
+eepromSize  =  256
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  146
+signature2 =  1
+pagesize   =  0
+------------------------------
+
+Device Name [AT90S4433]
+flashSize   =  4096
+eepromSize  =  256
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  146
+signature2 =  3
+pagesize   =  0
+------------------------------
+
+Device Name [AT90S4434]
+flashSize   =  4096
+eepromSize  =  256
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  147
+signature2 =  3
+pagesize   =  0
+------------------------------
+
+Device Name [AT90S8515]
+flashSize   =  8192
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  147
+signature2 =  1
+pagesize   =  0
+------------------------------
+
+Device Name [AT90S8515comp]
+flashSize   =  8192
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  147
+signature2 =  1
+pagesize   =  64
+------------------------------
+
+Device Name [AT90S8535]
+flashSize   =  8192
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  147
+signature2 =  3
+pagesize   =  0
+------------------------------
+
+Device Name [AT90S8535comp]
+flashSize   =  8192
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  147
+signature2 =  3
+pagesize   =  64
+------------------------------
+
+Device Name [AT90USB1286]
+flashSize   =  131072
+eepromSize  =  4096
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  151
+signature2 =  130
+pagesize   =  256
+------------------------------
+
+Device Name [AT90USB1287]
+flashSize   =  131072
+eepromSize  =  4096
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  151
+signature2 =  130
+pagesize   =  256
+------------------------------
+
+Device Name [AT90USB162]
+flashSize   =  16384
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  148
+signature2 =  130
+pagesize   =  128
+------------------------------
+
+Device Name [AT90USB646]
+flashSize   =  65536
+eepromSize  =  2048
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  150
+signature2 =  130
+pagesize   =  256
+------------------------------
+
+Device Name [AT90USB647]
+flashSize   =  65536
+eepromSize  =  2048
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  150
+signature2 =  130
+pagesize   =  256
+------------------------------
+
+Device Name [AT90USB82]
+flashSize   =  8192
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  147
+signature2 =  130
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega103]
+flashSize   =  131072
+eepromSize  =  4096
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  151
+signature2 =  1
+pagesize   =  256
+------------------------------
+
+Device Name [ATmega103comp]
+flashSize   =  131072
+eepromSize  =  4096
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  151
+signature2 =  1
+pagesize   =  0
+------------------------------
+
+Device Name [ATmega128]
+flashSize   =  131072
+eepromSize  =  4096
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  151
+signature2 =  2
+pagesize   =  256
+------------------------------
+
+Device Name [ATmega1280]
+flashSize   =  131072
+eepromSize  =  4096
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  151
+signature2 =  3
+pagesize   =  256
+------------------------------
+
+Device Name [ATmega1281]
+flashSize   =  131072
+eepromSize  =  4096
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  151
+signature2 =  4
+pagesize   =  256
+------------------------------
+
+Device Name [ATmega16]
+flashSize   =  16384
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  148
+signature2 =  3
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega161]
+flashSize   =  16384
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  148
+signature2 =  1
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega161comp]
+flashSize   =  16384
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  148
+signature2 =  1
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega162]
+flashSize   =  16384
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  148
+signature2 =  4
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega163]
+flashSize   =  16384
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  148
+signature2 =  2
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega164P]
+flashSize   =  16384
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  148
+signature2 =  10
+pagesize   =  256
+------------------------------
+
+Device Name [ATmega165]
+flashSize   =  16384
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  148
+signature2 =  7
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega165P]
+flashSize   =  16384
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  148
+signature2 =  7
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega168]
+flashSize   =  16384
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  148
+signature2 =  6
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega168P]
+flashSize   =  16384
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  148
+signature2 =  11
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega169]
+flashSize   =  16384
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  148
+signature2 =  5
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega169P]
+flashSize   =  16384
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  148
+signature2 =  5
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega16HVA]
+flashSize   =  16384
+eepromSize  =  256
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  148
+signature2 =  12
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega2560]
+flashSize   =  262144
+eepromSize  =  4096
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  152
+signature2 =  1
+pagesize   =  256
+------------------------------
+
+Device Name [ATmega2561]
+flashSize   =  262144
+eepromSize  =  4096
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  152
+signature2 =  2
+pagesize   =  256
+------------------------------
+
+Device Name [ATmega32]
+flashSize   =  32768
+eepromSize  =  1024
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  149
+signature2 =  2
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega323]
+flashSize   =  32768
+eepromSize  =  1024
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  149
+signature2 =  1
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega324P]
+flashSize   =  32768
+eepromSize  =  1024
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  149
+signature2 =  8
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega325]
+flashSize   =  32768
+eepromSize  =  1024
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  149
+signature2 =  5
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega3250]
+flashSize   =  32768
+eepromSize  =  1024
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  149
+signature2 =  6
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega3250P]
+flashSize   =  32768
+eepromSize  =  1024
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  149
+signature2 =  110
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega325P]
+flashSize   =  32768
+eepromSize  =  1024
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  149
+signature2 =  93
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega328P]
+flashSize   =  32768
+eepromSize  =  1024
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  149
+signature2 =  15
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega329]
+flashSize   =  32768
+eepromSize  =  1024
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  149
+signature2 =  3
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega3290]
+flashSize   =  32768
+eepromSize  =  1024
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  149
+signature2 =  4
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega3290P]
+flashSize   =  32768
+eepromSize  =  1024
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  149
+signature2 =  4
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega329P]
+flashSize   =  32768
+eepromSize  =  1024
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  149
+signature2 =  3
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega406]
+flashSize   =  40960
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  149
+signature2 =  7
+pagesize   =  128
+------------------------------
+
+Device Name [ATmega48]
+flashSize   =  4096
+eepromSize  =  256
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  146
+signature2 =  5
+pagesize   =  64
+------------------------------
+
+Device Name [ATmega48P]
+flashSize   =  4096
+eepromSize  =  256
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  146
+signature2 =  10
+pagesize   =  64
+------------------------------
+
+Device Name [ATmega64]
+flashSize   =  65536
+eepromSize  =  2048
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  150
+signature2 =  2
+pagesize   =  256
+------------------------------
+
+Device Name [ATmega640]
+flashSize   =  65536
+eepromSize  =  4096
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  150
+signature2 =  8
+pagesize   =  256
+------------------------------
+
+Device Name [ATmega644]
+flashSize   =  65536
+eepromSize  =  2048
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  150
+signature2 =  9
+pagesize   =  256
+------------------------------
+
+Device Name [ATmega644P]
+flashSize   =  65536
+eepromSize  =  2048
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  150
+signature2 =  10
+pagesize   =  256
+------------------------------
+
+Device Name [ATmega645]
+flashSize   =  65536
+eepromSize  =  2048
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  150
+signature2 =  5
+pagesize   =  256
+------------------------------
+
+Device Name [ATmega6450]
+flashSize   =  65536
+eepromSize  =  2048
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  150
+signature2 =  6
+pagesize   =  256
+------------------------------
+
+Device Name [ATmega649]
+flashSize   =  65536
+eepromSize  =  2048
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  150
+signature2 =  3
+pagesize   =  256
+------------------------------
+
+Device Name [ATmega6490]
+flashSize   =  65536
+eepromSize  =  2048
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  150
+signature2 =  4
+pagesize   =  256
+------------------------------
+
+Device Name [ATmega8]
+flashSize   =  8192
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  147
+signature2 =  7
+pagesize   =  64
+------------------------------
+
+Device Name [ATmega8515]
+flashSize   =  8192
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  147
+signature2 =  6
+pagesize   =  64
+------------------------------
+
+Device Name [ATmega8535]
+flashSize   =  8192
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  147
+signature2 =  8
+pagesize   =  64
+------------------------------
+
+Device Name [ATmega88]
+flashSize   =  8192
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  147
+signature2 =  10
+pagesize   =  64
+------------------------------
+
+Device Name [ATmega88P]
+flashSize   =  8192
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  147
+signature2 =  15
+pagesize   =  64
+------------------------------
+
+Device Name [ATtiny11]
+flashSize   =  1024
+eepromSize  =  0
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  144
+signature2 =  4
+pagesize   =  0
+------------------------------
+
+Device Name [ATtiny12]
+flashSize   =  1024
+eepromSize  =  64
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  144
+signature2 =  5
+pagesize   =  0
+------------------------------
+
+Device Name [ATtiny13]
+flashSize   =  1024
+eepromSize  =  64
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  144
+signature2 =  7
+pagesize   =  32
+------------------------------
+
+Device Name [ATtiny15]
+flashSize   =  1024
+eepromSize  =  64
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  144
+signature2 =  6
+pagesize   =  0
+------------------------------
+
+Device Name [ATtiny22]
+flashSize   =  2048
+eepromSize  =  128
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  145
+signature2 =  6
+pagesize   =  0
+------------------------------
+
+Device Name [ATtiny2313]
+flashSize   =  2048
+eepromSize  =  128
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  145
+signature2 =  10
+pagesize   =  32
+------------------------------
+
+Device Name [ATtiny24]
+flashSize   =  2048
+eepromSize  =  128
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  145
+signature2 =  11
+pagesize   =  32
+------------------------------
+
+Device Name [ATtiny25]
+flashSize   =  2048
+eepromSize  =  128
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  145
+signature2 =  8
+pagesize   =  32
+------------------------------
+
+Device Name [ATtiny26]
+flashSize   =  2048
+eepromSize  =  128
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  145
+signature2 =  9
+pagesize   =  32
+------------------------------
+
+Device Name [ATtiny261]
+flashSize   =  2048
+eepromSize  =  128
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  145
+signature2 =  12
+pagesize   =  32
+------------------------------
+
+Device Name [ATtiny28]
+flashSize   =  2048
+eepromSize  =  0
+hasFuseBits =  1
+hasExtendedFuseBits =  0
+signature0 =  30
+signature1 =  145
+signature2 =  7
+pagesize   =  0
+------------------------------
+
+Device Name [ATtiny43U]
+flashSize   =  4096
+eepromSize  =  64
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  146
+signature2 =  12
+pagesize   =  32
+------------------------------
+
+Device Name [ATtiny44]
+flashSize   =  4096
+eepromSize  =  256
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  146
+signature2 =  7
+pagesize   =  64
+------------------------------
+
+Device Name [ATtiny45]
+flashSize   =  4096
+eepromSize  =  256
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  146
+signature2 =  6
+pagesize   =  64
+------------------------------
+
+Device Name [ATtiny461]
+flashSize   =  4096
+eepromSize  =  256
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  146
+signature2 =  8
+pagesize   =  64
+------------------------------
+
+Device Name [ATtiny48]
+flashSize   =  4096
+eepromSize  =  64
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  146
+signature2 =  9
+pagesize   =  64
+------------------------------
+
+Device Name [ATtiny84]
+flashSize   =  8192
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  147
+signature2 =  12
+pagesize   =  64
+------------------------------
+
+Device Name [ATtiny85]
+flashSize   =  8192
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  147
+signature2 =  11
+pagesize   =  64
+------------------------------
+
+Device Name [ATtiny861]
+flashSize   =  8192
+eepromSize  =  512
+hasFuseBits =  1
+hasExtendedFuseBits =  1
+signature0 =  30
+signature1 =  147
+signature2 =  13
+pagesize   =  64
+------------------------------
+
